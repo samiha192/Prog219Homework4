@@ -57,6 +57,10 @@ var scoreText;
 
 var x = document.getElementById("myAudio");
 	
+window.onload = function() {
+    x.play();
+}
+	
 function playAudio() { 
   x.play(); 
 } 
@@ -69,7 +73,7 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    x.play(); 
+   
     this.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
