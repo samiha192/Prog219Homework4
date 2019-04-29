@@ -61,6 +61,7 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
+	x.play(); //play music
     this.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
@@ -70,7 +71,7 @@ function preload ()
 
 function create ()
 {
-x.play(); //play music
+
     //  A simple background for our game
     this.add.image(400, 300, 'sky');
 
