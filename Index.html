@@ -13,9 +13,7 @@
   display:block;
 }
     </style>
-	<audio id="myAudio">
-  <source src="Happy.mp3" type="audio/mpeg">
-</audio>
+	
 
 
 </head>
@@ -54,6 +52,7 @@ var cursors;
 var score = 0;
 var gameOver = false;
 var scoreText;
+var MyMusic;
 
 var x = document.getElementById("myAudio");
 
@@ -61,12 +60,13 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-	x.play(); //play music
-    this.load.image('sky', 'assets/sky.png');
+	x.play(); //play musics.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+    myMusic = new sound("Happy.mp3");
+    myMusic.play();
 }
 
 function create ()
@@ -220,11 +220,11 @@ function hitBomb (player, bomb)
 }
 
 function playAudio() { 
-  x.play(); 
+  MyMusic.play(); 
 } 
 
 function pauseAudio() { 
-  x.pause(); 
+  MyMusic.pause(); 
 }
 </script>
 
