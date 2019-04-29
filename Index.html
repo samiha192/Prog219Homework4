@@ -60,17 +60,18 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    musics.load.image('sky', 'assets/sky.png');
+    this.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
-    myMusic = new sound("Happy.mp3");
-    myMusic.play();
+   
 }
 
 function create ()
 {
+    myMusic = new sound("Happy.mp3");
+    myMusic.play();
 
     //  A simple background for our game
     this.add.image(400, 300, 'sky');
